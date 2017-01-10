@@ -18,26 +18,22 @@ import java.util.*;
  */
 public class Main {
 
-    public static String childTokenString(ParseTree ctx)
-    {
+    public static String childTokenString(ParseTree ctx) {
         if (ctx == null)
             return "";
 
         int nChildren = ctx.getChildCount();
 
-        if (nChildren == 0)
-        {
+        if (nChildren == 0) {
             return ctx.getText();
         }
 
         String retval = "";
 
-        for (int i = 0; i < nChildren; i++)
-        {
+        for (int i = 0; i < nChildren; i++) {
             ParseTree child = ctx.getChild(i);
             String childText = childTokenString(child);
-            if (!childText.equals(""))
-            {
+            if (!childText.equals("")) {
                 retval += childText + " ";
             }
         }
@@ -46,6 +42,7 @@ public class Main {
             retval = retval.substring(0, retval.length() - 1);
         return retval;
     }
+
     public static void main(String[] args) throws IOException {
         String f = "D:\\JAVALab\\JAVAObfuscator\\InFile\\HelloWorld.java";
         Lexer lexer = new Java8Lexer(new ANTLRFileStream(f));
@@ -72,8 +69,11 @@ public class Main {
             CommonToken ct = new CommonToken(Java8Parser.RULE_expressionName, map.get(va));
             ii.getParent().addChild(ct);
         }
+        String preSave = childTokenString(t);
+        String save = preSave.substring(0, preSave.length() - 5); // To get rid of <EOF>
+        System.out.println(save);
+        Save(save, "D:\\JAVALab\\JAVAObfuscator\\OutFile\\HelloWorld.java");
 
-        Save(childTokenString(t),"D:\\JAVALab\\JAVAObfuscator\\OutFile\\HelloWorld.java");
     }
 
     private static void Save(String s, String s1) {
@@ -85,7 +85,9 @@ public class Main {
         } catch (IOException ex) {
             // report
         } finally {
-            try {writer.close();} catch (Exception ex) {/*ignore*/}
+            try {
+                writer.close();
+            } catch (Exception ex) {/*ignore*/}
         }
     }
 

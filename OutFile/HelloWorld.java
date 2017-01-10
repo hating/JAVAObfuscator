@@ -1,1 +1,17 @@
-public class HelloWorld { public static void main ( String [ ] ASSET70af6ce4ebe0 ) { String ASSET3511ab040075 = " Hell " ; String ASSET51a6458a8de2 = " is " ; String ASSETa98337283e39 = " empty " ; String ASSET42d75f93a870 = " and " ; String ASSET98ad927e7367 = " all " ; String ASSETddf9966db3b0 = " the " ; String ASSET4092255541d3 = " devils " ; String ASSET4015e9ce43ed = " are " ; String ASSET198d120ea3ac = " here " ; System . out . println ( ASSET3511ab040075 + ASSET51a6458a8de2 + ASSETa98337283e39 + "," + ASSET42d75f93a870 + ASSET98ad927e7367 + ASSETddf9966db3b0 + ASSET4092255541d3 + ASSET4015e9ce43ed + ASSET198d120ea3ac + "." ) ; } } <EOF>
+public class HelloWorld {
+    public static void main(String[] ASSETf6ce4ebe0f12) {
+        String ASSET993511ab0400 = " Hell ";
+        String ASSET8de22446cc76 = " is ";
+        String ASSETf7b60acf85ec = " empty ";
+        String ASSET93a87094459f = " and ";
+        String ASSET1a603769c1f9 = " all ";
+        String ASSETb09e84365034 = " the ";
+        String ASSETe76d275d22db = " devils ";
+        String ASSET3edfb0668dda = " are ";
+        String ASSET2285fa6d3e82 = " here ";
+        System.out.println(ASSET993511ab0400 + ASSET8de22446cc76 +
+                ASSETf7b60acf85ec + "," + ASSET93a87094459f + ASSET1a603769c1f9 +
+                ASSETb09e84365034 + ASSETe76d275d22db + ASSET3edfb0668dda +
+                ASSET2285fa6d3e82 + ".");
+    }
+}
